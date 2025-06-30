@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    /* fonts */
+    --font-inter: Inter;
+    --font-krona-one: "Krona One";
+    --font-kodchasan: Kodchasan;
+
+    /* font sizes */
+    --font-size-5xl: 24px;
+    --font-size-lgi: 19px;
+
+    /* Colors */
+    --color-white: #fff;
+
+    /* Paddings */
+    --padding-xl: 20px;
+    --padding-77xl: 96px;
+    --padding-43xl: 62px;
+
+    /* Effects */
+    --button-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* If sidebar is visible */
+.dashboard-container {
+    position: relative;
+    padding: 0;
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.paper {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 10px;
+}
+h4 {
+    color: #333;
+    float: left;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.turnover,
+.notif {
+    font-size: 14px;
+    font-family: var(--font-kodchasan);
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 100px;
+}
+
+.notifications-container {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow: auto; /* Enable scrolling */
+    border: 2px solid #ddd; /* Optional: add a border for a better look */ /* Optional: add rounded corners */
+    padding: 10px;
+    font-family: var(--font-kodchasan);
+}
+
+.notifications-container::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+.notifications-container::-webkit-scrollbar-track {
+    /* Background color of the scrollbar track */
+    border-radius: 8px;
+}
+
+.notifications-container::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.notifications-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+.leave-requests-table {
+    padding: 20px;
+    max-height: 270px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-kodchasan);
+}
+
+.leave-requests-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-kodchasan);
+    overflow: auto;
+}
+
+.leave-requests-table th,
+.leave-requests-table td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    font-family: var(--font-kodchasan);
+}
+
+.leave-requests-table th {
+    background-color: #d1d1d1;
+    color: #000;
+    font-family: var(--font-kodchasan);
+}
+
+.leave-requests-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.leave-requests-table a {
+    color: #000;
+    text-decoration: none;
+}
+
+.leave-requests-table a:hover {
+    text-decoration: underline;
+}
+
+.leave-requests-table .approve-btn,
+.leave-requests-table .decline-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline;
+    font-family: var(--font-kodchasan);
+}
+
+.leave-requests-table .approve-btn {
+    background-color: #28a745;
+    color: white;
+    margin-right: 8px;
+}
+
+.leave-requests-table .approve-btn:hover {
+    background-color: #218838;
+}
+
+.leave-requests-table .decline-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.leave-requests-table .decline-btn:hover {
+    background-color: #c82333;
+}
+
+.leave-requests-table td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    padding: 20px;
+}
+.approve-btn:disabled,
+.decline-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.custom-calendar {
+    display: grid;
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Max width for larger screens */
+    grid-template-rows: auto 1fr;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px; /* Slightly smaller padding on mobile */
+    color: #000;
+    margin: 0 auto; /* Center the calendar */
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.875rem; /* 14px on mobile */
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px; /* Smaller gap on mobile */
+    margin-top: 8px;
+}
+
+.calendar-date {
+    padding: 4px; /* Smaller padding on mobile */
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    position: relative;
+    width: 32px; /* Smaller size on mobile */
+    height: 32px; /* Smaller size on mobile */
+    font-size: 0.875rem; /* Smaller font on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-date {
+    width: 32px; /* Match calendar-date width */
+    height: 32px; /* Match calendar-date height */
+}
+
+.highlighted {
+    background-color: #12518d;
+    border-radius: 50%;
+    color: white;
+}
+
+.event {
+    font-size: 0.75rem; /* Smaller font for events on mobile */
+    margin-top: 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: black;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100px; /* Smaller minimum width on mobile */
+    max-width: 300px; /* Add max-width to prevent overflow */
+    font-size: 0.75rem; /* Smaller font for tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.calendar-date:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Media query for screens larger than 640px (sm breakpoint) */
+@media (min-width: 640px) {
+    .custom-calendar {
+        padding: 16px;
+    }
+
+    .calendar-header {
+        font-size: 1rem;
+    }
+
+    .calendar-grid {
+        gap: 8px;
+    }
+
+    .calendar-date {
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .empty-date {
+        width: 40px;
+        height: 40px;
+    }
+
+    .event {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .tooltip {
+        padding: 5px;
+        min-width: 120px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Handle very small screens */
+@media (max-width: 360px) {
+    .custom-calendar {
+        padding: 8px;
+    }
+
+    .calendar-date {
+        width: 28px;
+        height: 28px;
+        padding: 2px;
+        font-size: 0.75rem;
+    }
+
+    .empty-date {
+        width: 28px;
+        height: 28px;
+    }
+
+    .calendar-header {
+        font-size: 0.75rem;
+    }
+}
