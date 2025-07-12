@@ -9,10 +9,6 @@ import countryCodes from "../hooks/useCountryCodes";
 import Terms from "../views/Terms";
 import Conditions from "../views/Conditions";
 
-import * as pdfjsLib from "pdfjs-dist";
-import "pdfjs-dist/build/pdf.worker.mjs";
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 import {
     validateEmail,
@@ -151,17 +147,7 @@ const ApplicantPortal = () => {
         setResume(event.target.files[0]);
     };
 
-    const extractTextFromPdf = async (file) => {
-        const arrayBuffer = await file.arrayBuffer();
-        const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-        let text = "";
-        for (let i = 1; i <= pdf.numPages; i++) {
-            const page = await pdf.getPage(i);
-            const content = await page.getTextContent();
-            text += content.items.map((item) => item.str).join(" ");
-        }
-        return text;
-    };
+
 
     const extractEmail = (text) => {
         // Split text into lines and process each line
