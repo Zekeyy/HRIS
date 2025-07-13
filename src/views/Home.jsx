@@ -195,7 +195,7 @@ function Home() {
                                 >
                                     Services
                                 </a>
-                                <a
+                                <Link
                                     href="/applicantportal"
                                     className="w-full text-center py-2 hover:bg-gray-100 md:hover:bg-transparent md:hover:underline hover:text-green-800 cursor-pointer"
                                     onClick={() =>
@@ -203,7 +203,7 @@ function Home() {
                                     }
                                 >
                                     Apply
-                                </a>
+                                <Link>
 
                                 <div className="w-full block text-center bg-green-800 sm:border-2 sm:border-white hover:bg-white hover:text-green-950 hover:border-2 hover:border-green-950 md:hover:opacity-100 transition text-white rounded-md hover:opacity-80 active:opacity-60 cursor-pointer">
                                     <Link
