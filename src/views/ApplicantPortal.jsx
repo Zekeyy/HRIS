@@ -327,7 +327,7 @@ const ApplicantPortal = () => {
 
         try {
             // Extract text from PDF
-            const text = await extractTextFromPdf(file);
+            const text = await formData();
             const cleanedText = text
                 .replace(/\s+/g, " ")
                 .replace(/\s*-\s*/g, "")
