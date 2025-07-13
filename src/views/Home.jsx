@@ -196,7 +196,7 @@ function Home() {
                                     Services
                                 </a>
                                 <a
-                                    href="/applicantPortal"
+                                    href="/applicantportal"
                                     className="w-full text-center py-2 hover:bg-gray-100 md:hover:bg-transparent md:hover:underline hover:text-green-800 cursor-pointer"
                                     onClick={() =>
                                         setShowNavigator(!showNavigator)
