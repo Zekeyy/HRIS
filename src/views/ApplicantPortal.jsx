@@ -8,8 +8,6 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import countryCodes from "../hooks/useCountryCodes";
 import Terms from "../views/Terms";
 import Conditions from "../views/Conditions";
-
-
 import {
     validateEmail,
     validatePhoneNumber,
